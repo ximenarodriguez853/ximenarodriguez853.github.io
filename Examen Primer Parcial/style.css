@@ -1,0 +1,146 @@
+body {
+  font-family: "Comic Sans MS", Arial, sans-serif;
+  background: #ffeafd;
+  color: #783a7e;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #d44bb8;
+  text-shadow: 0 0 12px #ffbdf4;
+  margin-bottom: 20px;
+}
+
+/* Distribución */
+#main {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+#robot-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Canvas estilo suave rosado */
+canvas {
+  border: 3px solid #ffb4e6;
+  background: #fff4fb;
+  box-shadow: 0 0 20px #ffbdf4 inset, 0 0 12px #ff9fe9;
+  border-radius: 10px;
+}
+
+/* Controles & sliders */
+#controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background: #ffd7f5;
+  border: 2px solid #ff9fe9;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 0 18px #ffbdf4;
+}
+
+.control-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+input[type="range"] {
+  writing-mode: vertical-rl;
+  -webkit-appearance: slider-vertical;
+  width: 18px;
+  height: 200px;
+  background: #ffc8f3;
+  accent-color: #ff77cf;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input[type="number"] {
+  background: #ffecfa;
+  color: #944c8f;
+  border: 1px solid #ff9fe9;
+  border-radius: 6px;
+  padding: 4px;
+  width: 80px;
+  text-align: center;
+}
+
+/* Botones */
+button {
+  background: linear-gradient(180deg, #ff9fe9, #ff77cf);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 0 12px #ffbdf4;
+}
+button:hover {
+  background: linear-gradient(180deg, #ffbdf4, #ff89d6);
+  box-shadow: 0 0 20px #ffc8f3;
+}
+
+/* Paneles informativos */
+#info-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  width: 90%;
+}
+
+.panel {
+  background: #ffe6fb;
+  border: 1px solid #ff9fe9;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 0 18px #ffd1f6 inset;
+  text-align: left;
+}
+
+.panel h3 {
+  color: #d44bb8;
+  border-bottom: 1px solid #ffb4e6;
+  margin-bottom: 6px;
+}
+
+.kv {
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.small {
+  font-size: 12px;
+  color: #b35da5;
+}
+
+/* Gráficas */
+#graphs {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#alerta {
+  color: #ff4fbf;
+  font-weight: bold;
+  margin-top: 10px;
+  min-height: 20px;
+}

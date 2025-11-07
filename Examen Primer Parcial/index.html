@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Robot Primer Examen Parcial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Robot Primer Examen Parcial</h1>
+
+  <div id="main">
+    <!-- Lado izquierdo: dibujo -->
+    <div id="robot-area">
+      <canvas id="world" width="700" height="700"></canvas>
+
+      <div id="info-panels">
+        <div class="panel" id="robotPanel">
+          <h3>Estado Robot</h3>
+          <div class="kv"><div>TCP x (m)</div><div id="tcpX">0.000</div></div>
+          <div class="kv"><div>TCP y (m)</div><div id="tcpY">0.000</div></div>
+          <div class="kv"><div>q1 (rad)</div><div id="q1rad">0.000</div></div>
+          <div class="kv"><div>q1 (deg)</div><div id="q1deg">0.0°</div></div>
+          <div class="kv"><div>q2 (rad)</div><div id="q2rad">0.000</div></div>
+          <div class="kv"><div>q2 (deg)</div><div id="q2deg">0.0°</div></div>
+          <div class="small">Workspace r_max = <span id="rmax"></span> m</div>
+        </div>
+
+        <div class="panel" id="graphPanel">
+          <h3>Gráficas (valores actuales)</h3>
+          <div class="kv"><div>Último q1 (rad)</div><div id="gq1rad">0.000</div></div>
+          <div class="kv"><div>Último q1 (deg)</div><div id="gq1deg">0.0°</div></div>
+          <div class="kv"><div>Último q2 (rad)</div><div id="gq2rad">0.000</div></div>
+          <div class="kv"><div>Último q2 (deg)</div><div id="gq2deg">0.0°</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lado derecho: sliders y controles -->
+    <div id="controls">
+      <div class="control-block">
+        <label>xd (m)</label>
+        <input id="xd" type="number" step="0.001" min="-0.24" max="0.24" value="0.14">
+        <input id="xdSlider" type="range" step="0.001" min="-0.24" max="0.24" value="0.14" orient="vertical">
+      </div>
+      <div class="control-block">
+        <label>yd (m)</label>
+        <input id="yd" type="number" step="0.001" min="-0.24" max="0.24" value="0.14">
+        <input id="ydSlider" type="range" step="0.001" min="-0.24" max="0.24" value="0.14" orient="vertical">
+      </div>
+      <button id="inicioBtn">Inicio</button>
+      <button id="homeBtn">HOME (q₁=90°)</button>
+    </div>
+  </div>
+
+  <div id="graphs">
+    <canvas id="q1canvas" width="700" height="150"></canvas>
+    <canvas id="q2canvas" width="700" height="150"></canvas>
+  </div>
+
+  <div id="alerta"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
